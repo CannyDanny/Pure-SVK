@@ -17,37 +17,48 @@
   <div id="nav-placeholder">
 
   </div>
-  <h1 class="swiper-title">Stan sa sucastou vysadzania novych stromov</h1>
-  <!-- Slider main container -->
-  <div class="swiper-container">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">Slide 1</div>
-      <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-slide">Slide 3</div>
-    </div>
-    <!-- Add Arrows -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-  </div>
 
-  <div class="produkt-information">
-        <h1>Informacie o produkte</h1>
-        <div class="content-produkt">
+  <h1 class="swiper-title fadein-load">Stan sa sucastou vysadzania novych stromov</h1>
+  <!-- Slider main container -->
+
+  <section class="produkt fadein-load">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+      </div>
+      <!-- Add Arrows -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+
+    <div class="produkt-information">
+      <h1>Informacie o produkte</h1>
+      <div class="content-produkt">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing
           elit. In aliquam placeat laborum incidunt deserunt
           voluptatum, repellendus alias, impedit facilis nostrum.
           elit. In aliquam placeat laborum incidunt deserunt
           voluptatum, repellendus alias, impedit facilis nostrum.
-          elit. In aliquam placeat laborum incidunt deserunt
-          voluptatum, repellendus alias, impedit facilis nostrum.</p>
-        </div>
-    <div class="other-information">
-      <button class="collapsible-two">Starostlivost o produkt</button>
-      <div class="content-starostlivost">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing
           elit. In aliquam placeat laborum incidunt deserunt
           voluptatum, repellendus alias, impedit facilis nostrum.</p>
       </div>
+    </div>
+  </section>
+
+  <div class="other-information">
+    <button class="collapsible-two">Starostlivost o produkt</button>
+    <div class="content-starostlivost">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+        elit. In aliquam placeat laborum incidunt deserunt
+        voluptatum, repellendus alias, impedit facilis nostrum. Lorem ipsum dolor sit amet, consectetur adipisicing
+          elit. In aliquam placeat laborum incidunt deserunt
+          voluptatum, repellendus alias, impedit facilis nostrum.
+          elit. In aliquam placeat laborum incidunt deserunt
+          voluptatum, repellendus alias, impedit facilis nostrum.
+          elit. In aliquam placeat laborum incidunt deserunt
+          voluptatum, repellendus alias, impedit facilis nostrum.</p>
     </div>
   </div>
 
@@ -98,41 +109,8 @@
     </form>
   </section>
 
-
-
-  <script>
-    $.get("nav.html", function(data) {
-      $("#nav-placeholder").replaceWith(data);
-    });
-  </script>
-  <script>
-    $(document).ready(function() {
-      //initialize swiper when document ready
-      var mySwiper = new Swiper('.swiper-container', {
-        // Optional parameters
-        direction: 'vertical',
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-      })
-    });
-  </script>
-  <script>
-  $(document).ready(function(){
-    $(".collapsible-one").click(function(){
-      $(".content-produkt").slideToggle("slow");
-    });
-  });
-  </script>
-  <script>
-  $(document).ready(function(){
-    $(".collapsible-two").click(function(){
-      $(".content-starostlivost").slideToggle("slow");
-    });
-  });
-  </script>
   <script src="js/script.js"></script>
+  <script src="js/jquery.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.js"></script>
 </body>
 

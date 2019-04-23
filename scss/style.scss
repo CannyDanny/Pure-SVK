@@ -46,10 +46,23 @@ ul {
   padding: 0;
   list-style-type: none;
   position: relative;
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+.logo {
+  display: block;
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  align-items: flex-start;
 }
 
 ul li {
   display: inline-block;
+  padding: 10px 0px 10px 10px;
+
 }
 
 ul li a {
@@ -59,7 +72,7 @@ ul li a {
   padding: 15px;
   display: block;
   font-family: 'PaneuropaNeueRegular';
-  font-size: 20px;
+  font-size: 2em;
 }
 
 ul ul {
@@ -210,7 +223,6 @@ nav div {
     place-self: center;
     overflow: hidden;
 
-
     h1 {
       color: $brown;
       font-size: 3.5em;
@@ -237,7 +249,7 @@ nav div {
       font-size: 1em;
       font-weight: 100;
       padding: 20px;
-      overflow:hidden;
+      overflow: hidden;
     }
 
     .nazov-projektu {
@@ -245,10 +257,12 @@ nav div {
       font-size: 1.1em;
     }
   }
+
   a {
     text-align: center;
     width: 100%;
   }
+
   button {
     font-size: 1.7em;
     width: 100%;
@@ -345,18 +359,18 @@ nav div {
 }
 /* End Timline */
 .swiper-title {
-  background-color: $brown;
-  color: $white;
+  color: $brown;
   border-top: 1px solid $white;
   padding: 20px;
   font-family: 'PaneuropaNeueRegular';
   font-size: 2em;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .swiper-container {
   width: 100%;
-  height: 50%;
+  height: 60%;
 }
 
 .swiper-slide {
@@ -382,20 +396,38 @@ nav div {
   background-image: url("../img/strom-muz.jpg");
   background-size: cover;
 }
-
 /*  End of swiper   */
-
-
 .fadein {
-    opacity:0;
+  opacity: 0;
+}
+/* End of Fade animation*/
+.produkt {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 2.5%;
+
+  .produkt-information {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h1 {
+      text-align: center;
+    }
+
+    p {
+      align-self: center;
+      padding: 10px;
+    }
+  }
 }
 
-/* End of Fade animation*/
-
-.produkt-information {
-  display: grid;
-  grid-auto-rows: auto;
-  margin: 20px 0;
+.other-information {
+  width: 100%;
+  margin-bottom: 2%;
 
   button {
     background-color: $darkbrown;
@@ -407,14 +439,9 @@ nav div {
     width: 100%;
   }
 
-  p {
-    padding: 10px;
-  }
-
-  .other-information {
-    .content-starostlivost {
-      display: none;
-    }
+  .content-starostlivost {
+    display: none;
+    padding: 20px;
   }
 }
 /* Section strom-ponuka Ends */
@@ -506,6 +533,21 @@ form {
     border-top: 1px solid $white;
   }
 }
+/*  Media queries  */
+@media screen and (min-width: 480px) {
+  .produkt {
+    width: 95%;
+    height: 95%;
+
+    .swiper-container {
+      height: 95%;
+    }
+
+    .produkt-information {
+      width: 80%;
+    }
+  }
+}
 @media screen and(min-width: 760px) {
   .container {
     display: grid;
@@ -525,27 +567,27 @@ form {
       grid-template-rows: 50% 50%;
       overflow: hidden;
     }
+
     .strom-ponuka {
       display: grid;
     }
   }
+
   .fullscreen-picture {
     h1 {
       font-size: 4em;
     }
   }
-}
-@media screen and(min-width: 1200px) {
-  .container {
-    .container-text {
-      font-size: 2.2em;
-    }
+
+  .produkt {
+    flex-direction: row;
+  }
+
+  .swiper-title {
+    font-size: 2.7em;
   }
 }
-/*  Media queries  */
-@media (max-width: 767px) {
-
-
+@media screen and (max-width: 767px) {
   nav div {
     display: block;
     background-color: $white;
@@ -566,6 +608,10 @@ form {
 
     li:nth-child(even) {
       border: none;
+    }
+
+    .logo img {
+      display: block;
     }
   }
 
@@ -593,5 +639,16 @@ form {
   /* Make all right container-timelines behave like the left ones */
   .right {
     left: 0;
+  }
+}
+@media screen and(min-width: 1200px) {
+  .container {
+    .container-text {
+      font-size: 2.2em;
+    }
+  }
+
+  .swiper-title {
+    font-size: 3.5em;
   }
 }

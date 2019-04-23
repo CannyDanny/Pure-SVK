@@ -40,10 +40,26 @@ ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  position: relative; }
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
+
+.logo {
+  display: block;
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
 
 ul li {
-  display: inline-block; }
+  display: inline-block;
+  padding: 10px 0px 10px 10px; }
 
 ul li a {
   background-color: #fff;
@@ -52,7 +68,7 @@ ul li a {
   padding: 15px;
   display: block;
   font-family: 'PaneuropaNeueRegular';
-  font-size: 20px; }
+  font-size: 2em; }
 
 ul ul {
   position: absolute;
@@ -320,17 +336,17 @@ nav div {
 
 /* End Timline */
 .swiper-title {
-  background-color: #CCB6A9;
-  color: #fff;
+  color: #CCB6A9;
   border-top: 1px solid #fff;
   padding: 20px;
   font-family: 'PaneuropaNeueRegular';
   font-size: 2em;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  text-align: center; }
 
 .swiper-container {
   width: 100%;
-  height: 50%; }
+  height: 60%; }
 
 .swiper-slide {
   text-align: center;
@@ -363,11 +379,42 @@ nav div {
   opacity: 0; }
 
 /* End of Fade animation*/
-.produkt-information {
-  display: grid;
-  grid-auto-rows: auto;
-  margin: 20px 0; }
-  .produkt-information button {
+.produkt {
+  width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 2.5%; }
+  .produkt .produkt-information {
+    margin: 20px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .produkt .produkt-information h1 {
+      text-align: center; }
+    .produkt .produkt-information p {
+      -ms-flex-item-align: center;
+          align-self: center;
+      padding: 10px; }
+
+.other-information {
+  width: 100%;
+  margin-bottom: 2%; }
+  .other-information button {
     background-color: #AA8E7D;
     border-bottom: 1px solid #fff;
     color: #fff;
@@ -375,10 +422,9 @@ nav div {
     padding: 10px;
     text-align: center;
     width: 100%; }
-  .produkt-information p {
-    padding: 10px; }
-  .produkt-information .other-information .content-starostlivost {
-    display: none; }
+  .other-information .content-starostlivost {
+    display: none;
+    padding: 20px; }
 
 /* Section strom-ponuka Ends */
 .form {
@@ -490,6 +536,16 @@ form {
     height: 100%;
     border-top: 1px solid #fff; }
 
+/*  Media queries  */
+@media screen and (min-width: 480px) {
+  .produkt {
+    width: 95%;
+    height: 95%; }
+    .produkt .swiper-container {
+      height: 95%; }
+    .produkt .produkt-information {
+      width: 80%; } }
+
 @media screen and (min-width: 760px) {
   .container {
     display: grid;
@@ -506,14 +562,16 @@ form {
     .container .strom-ponuka {
       display: grid; }
   .fullscreen-picture h1 {
-    font-size: 4em; } }
+    font-size: 4em; }
+  .produkt {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+  .swiper-title {
+    font-size: 2.7em; } }
 
-@media screen and (min-width: 1200px) {
-  .container .container-text {
-    font-size: 2.2em; } }
-
-/*  Media queries  */
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   nav div {
     display: block;
     background-color: #fff; }
@@ -527,6 +585,8 @@ form {
     position: static; }
     ul ul li:nth-child(even) {
       border: none; }
+    ul ul .logo img {
+      display: block; }
   .timeline::after {
     left: 31px; }
   /* Full-width container-timelines */
@@ -547,3 +607,9 @@ form {
   /* Make all right container-timelines behave like the left ones */
   .right {
     left: 0; } }
+
+@media screen and (min-width: 1200px) {
+  .container .container-text {
+    font-size: 2.2em; }
+  .swiper-title {
+    font-size: 3.5em; } }

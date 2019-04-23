@@ -1,20 +1,22 @@
 <nav>
-      <div>
-            <i class="fa fa-bars" style="color: black;"></i>
-      </div>
+  <div class="<span class=" glyphicon glyphicon-"></span>
+    <i class="fa fa-bars" style="color: black;"></i>
+  </div>
+  <ul>
 
+    <img class="logo" src="img/logo.jpg" alt="logo">
+
+    <li><a href="index.html">Domov</a></li>
+    <li><a href="about.html">O nas</a></li>
+    <li><a href="#">Projekty<i class="fa fa-sort-down"></i></a>
       <ul>
-            <li><a href="index.html">Domov</a></li>
-            <li><a href="about.html">O nas</a></li>
-            <li><a href="#">Projekty<i class="fa fa-sort-down"></i></a>
-                  <ul>
-                        <li><a href="strom.html">Kazdy strom sa pocita</a></li>
-                        <li><a href="rodnykraj.html">Rodny kraj</a></li>
-                  </ul>
-            </li>
-            <li><a href="fotospicka.html">Fotospicka</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="strom.html">Kazdy strom sa pocita</a></li>
+        <li><a href="rodnykraj.html">Rodny kraj</a></li>
       </ul>
+    </li>
+    <li><a href="fotospicka.html">Fotospicka</a></li>
+    <li><a href="kontakt.html">Kontakt</a></li>
+  </ul>
 </nav>
 
 
@@ -24,9 +26,9 @@
     $("ul ul").css("display", "none");
   });
 
-  $('ul li').click(function () {
-   $(this).siblings().find('ul').slideUp();
-   $(this).find('ul').slideToggle();
+  $('ul li').click(function() {
+    $(this).siblings().find('ul').slideUp();
+    $(this).find('ul').slideToggle();
   });
 
   $(window).resize(function() {

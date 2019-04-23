@@ -3,8 +3,9 @@ $.get("nav.html", function(data) {
 });
 
 $(document).ready(function() {
-  $('.container-text, .container-title').css('display', 'none');
-  $('.container-text, .container-title').fadeIn(700);
+  $('.fadein-load').css('display', 'none');
+  $('.fadein-load').fadeIn(1000);
+
   $(window).scroll(function() {
     $('.fadein').each(function(i) {
 
@@ -19,4 +20,19 @@ $(document).ready(function() {
 
     });
   });
+
+  $(".collapsible-two").click(function() {
+    $(".content-starostlivost").slideToggle("slow");
+  });
+
+  var mySwiper = new Swiper('.swiper-container', {
+    // Optional parameters
+    direction: 'vertical',
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  })
+
+
 });
