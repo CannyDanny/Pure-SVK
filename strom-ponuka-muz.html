@@ -63,27 +63,27 @@
   </div>
 
   <section class="form">
-    <form action="">
+    <form class="contact-form" action="contact-form.php" method="POST">
       <div>
         <label for="name">Meno</label>
-        <input type="text" name="name" placeholder="Vase meno">
+        <input type="text" name="name" placeholder="Vase meno" minlength="1" maxlength="20" required>
       </div>
       <div>
         <label for="last-name">Priezvisko</label>
-        <input type="text" name="last-name" placeholder="Vase Priezvisko">
+        <input type="text" name="last-name" placeholder="Vase Priezvisko" minlength="1" maxlength="20" required>
       </div>
       <div>
         <label for="email">Email</label>
-        <input type="email" name="email" placeholder="Vas Email">
+        <input type="email" name="email" placeholder="Vas Email" required>
       </div>
       <div>
         <label for="adresa">Adresa</label>
-        <input type="text" name="adresa" placeholder="Vasa adresa">
+        <input type="text" name="adress" placeholder="Vasa adresa" required>
       </div>
       <div class="color-size-input">
         <div>
-          <label for="farba">Farba</label>
-          <select name="cars">
+          <label for="color">Farba</label>
+          <select name="color" required>
             <option value="Biela">Biela</option>
             <option value="Cierna">Cierna</option>
             <option value="Cervena">Cervena</option>
@@ -91,8 +91,8 @@
           </select>
         </div>
         <div>
-          <label for="velkost">Velkost</label>
-          <select name="cars">
+          <label for="size">Velkost</label>
+          <select name="size" required>
             <option value="S">S</option>
             <option value="M">M</option>
             <option value="L">L</option>
@@ -100,12 +100,11 @@
           </select> </div>
       </div>
       <div>
-        <label for="koment">Vas komentar</label>
-        <textarea name="name" rows="8" cols="80">
-
+        <label for="comment">Vas komentar</label>
+        <textarea name="comment" rows="8" cols="80">
       </textarea>
       </div>
-      <button>Odoslat</button>
+      <button type="submit" name="submit">Odoslat</button>
     </form>
   </section>
 
